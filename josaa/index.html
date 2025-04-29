@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jee Mains College Predictor 2025 - NITs, IIITs, GFTIs</title>
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <div class="everything">
+        <header>
+            <div id="print-credit">
+                <h2 style='text-align:center; margin-bottom: 1rem;'>Created by Ankit Jaiswal</h2>
+            </div>
+            <nav id="nav">
+                <div class="nav-thing">
+                    <div class="logo">
+                        <span>AJ</span>
+                    </div>
+                    <div class="nav-menu">
+                        <ul class="desktop-ul">
+                            <li class="navList" id="home-nav">
+                                <a href="#" rel="noopener noreferrer" class="current-page">Home</a></li>
+                            <li class="navList" id="skills-nav">
+                                <a href="#" rel="noopener noreferrer">Blogs</a></li>
+                            <li class="navList" id="about-nav">
+                                <a href="#about" rel="noopener noreferrer">About</a></li>
+                            <li class="navList" id="project-nav">
+                                <a href="#" rel="noopener noreferrer">Predictors</a></li>
+                            <li class="navList" id="contact-nav">
+                                <a href="#contact" rel="noopener noreferrer">Creators</a>
+                            </li>
+                        </ul>
+                        <div class="menu-icon" id="menuIcon" onclick="showMenu()">
+                            <span class="icon-bar bar-1"></span>
+                            <span class="icon-bar bar-2"></span>
+                            <span class="icon-bar bar-3"></span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="mobile-ul" id="mobile-ul">
+                <span><a href="#" class="current-page">Home</a></span>
+                <span><a href="#">Blogs</a></span>
+                <span><a href="#">Predictor</a></span>
+                <span><a href="#">About</a></span>
+                <span><a href="#">Creators</a></span>
+            </div>
+            <div class="page-info">
+                <h2 class="title">Jee Mains <span class="mob-none">-</span> Josaa Predictor</h2>
+                <div class="instr">
+                    <span>Instructions / Informations</span>
+                    <div class="detailBox">
+                        <ol>
+                            <li class="info-detail">Official <b>JOSAA 2024</b> data is used in this predictor</li>
+                            <li class="info-detail">OS = Other State <br>AI = All India <br>GO = Goa <br>JK = jammu & Kashmir <br>Hs = Home State</li>
+                            <li class="info-detail">Enter Category Rank If Applicable</li>
+                            <li class="info-detail">Print Page only after table is shown to you (Use Predict Button Firstly)</li>
+                            <li class="info-detail"><b>Tip - </b>Select all branches or Use Catogrised Branches (this will select all related branches available)</li>
+                            <li class="info-detail">For Detailed Information About Josaa Click on bellow <b>Read More</b> Button</li>
+
+                        </ol>
+                        <div class="read-more">
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <form id="form" class="form">
+                <span class="toolName">Predictor</span>
+                <div class="selectors">
+                    <input type="hidden" id="type" value="main">
+                    <div class="rank-container ib">
+                        <input type="text" id="rank" class="rank" required="required" autocomplete="off"><span class="enter-rank">Enter Rank</span>
+                    </div>
+
+                    <div class="category-container ib">
+                        <span><img src="../img/down-arrow-white.svg" alt="..." class="downImg" ></span>
+                        <select id="category" class="ddds selection-field">
+                            <!-- all category will come by itself using js -->
+                        </select>
+                    </div>
+                    <div class="round-container ib">
+                        <span><img src="../img/down-arrow-white.svg" alt="..." class="downImg"></span>
+                        <select id="round" class="ddds selection-field" id="round">
+                            <option value="5">Round 5</option>
+                            <!-- <option value="4">Round 4</option>
+                            <option value="3">Round 3</option>
+                            <option value="2">Round 2</option>
+                            <option value="1">Round 1</option> -->
+                        </select>
+                    </div>
+                    <div class="state-container ib">
+                        <span><img src="../img/down-arrow-white.svg" alt="..." class="downImg"></span>
+                        <select class="ddds selection-field" id="home-state">
+                            <!-- all states will come by itself using js -->
+                        </select>
+                    </div>
+
+                    <!-- Branch Selection Modal Trigger -->
+                    <div class="branch-container ib">
+                        <button type="button" id="openBranchModal" class="dropdown-toggle">Select Branches</button>
+                    </div>
+
+                    <!-- Branch Selection Modal -->
+                    <div id="branchModal" class="modal">
+                        <div class="modal-content">
+                            <span id="closeModal" class="close">&times;</span>
+                            <div class="branches-type-box">
+                                <div class="allSeprate">
+                                    <input type="text" id="dropdown-search" class="search-branch" placeholder="Search branches...">
+                                    <div class="dropdown-controls">
+                                        <button type="button" id="select-all" class="dd-btn">Select All</button>
+                                        <button type="button" id="deselect-all" class="dd-btn">Deselect All</button>
+                                    </div>
+                                    <ul id="dropdown-options"></ul>
+                                </div>
+                                <div class="allCommon">
+                                    <span class="toolName">Categorized Branches</span>
+                                    <ul id="branchType"></ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="gender-selector" class="gender cb ib">
+                        <span class="gender-text">gender : </span>
+                        <div class="gender-box">
+                            <label><input type="radio" name="gender" value="Neutral" checked> Neutral</label>
+                            <label><input type="radio" name="gender" value="Female"> Female</label>
+                        </div>
+                    </div>
+
+                    <div id="instution-type" class="type cb ib">
+                        <span class="gender-text">Institution: </span>
+                        <div class="gender-box">
+                            <label><input type="checkbox" name="instution" value="NIT" checked> NIT</label>
+                            <label><input type="checkbox" name="instution" value="IIIT"> IIIT</label>
+                            <label><input type="checkbox" name="instution" value="GFTI"> GFTI</label>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button type="submit" id="submit-btn" class="btn">Predict</button>
+                        <button type="button" id="print-btn" class="btn">Print</button>
+                    </div>
+                </div>
+
+            </form>
+            <div class="details">
+                <div class="userInputD"></div>
+            </div>
+            <div class="table-container" id="table-container"></div>
+            <button id="loadMore" class="btn-more" style="display: none;">Load More</button>
+        </main>
+
+        <!-- footer -->
+
+        <footer>
+            <div class="footerDetails">
+                <span id="tagLine">@copyright 2025 All Rights Reserved to Ankit Jaiswal</span>
+            </div>
+            <div class="footerCreator">
+                <div class="names">
+                    <span class="creatorsNames">ANKIT JAISWAL</span>
+                </div>
+                <div class="socal">
+                    <a href="https://twitter.com/GrandTheftCoder" target="_blank" rel="noopener noreferrer" class="icon" id="fb"><img src="https://raw.githubusercontent.com/iamaako/character-certificate-/main/x.png" alt="X"></a>
+
+                    <a href="https://www.instagram.com/grandtheftcoders" target="_blank" rel="noopener noreferrer" class="icon" id="insta"><img src="https://raw.githubusercontent.com/iamaako/character-certificate-/main/instaLogo.png" alt="insta"></a>
+
+                    <a href="https://t.me/grand_theft_coders" target="_blank" rel="noopener noreferrer" class="icon" id="tg"><img src="https://raw.githubusercontent.com/iamaako/character-certificate-/main/tgLogo.png" alt="tg"></a>
+
+                    <a href="https://whatsapp.com/channel/0029VadyNAm1yT2GZUwTqi36" target="_blank" rel="noopener noreferrer" class="icon" id="wa"><img src="https://raw.githubusercontent.com/iamaako/character-certificate-/main/waLogo.png" alt="whatsapp"></a>
+
+                    <a href="https://www.youtube.com/channel/UCAVhCVGt-FPBpJ728Jjgz8w" target="_blank" rel="noopener noreferrer" class="icon" id="yt"><img src="https://raw.githubusercontent.com/iamaako/character-certificate-/main/ytLogo.png" alt="youtube"></a>
+
+                    <a href="https://www.reddit.com/r/GrandTheftCoders/" target="_blank" rel="noopener noreferrer" class="icon" id="yt"><img src="https://raw.githubusercontent.com/iamaako/character-certificate-/main/reddit.png" alt="reddit"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.6.2/sql-wasm.js"></script>
+    <script src="../script-style.js"></script>
+    <script src="script.js"></script>
+    <script src="../features.js"></script>
+</body>
+
+</html>
+
+</html>
+
+</html>
