@@ -1,3 +1,5 @@
+/* this file is for predictor pages */
+
 function showMenu() {
     const menuIcon = document.getElementById('menuIcon');
     const mobileUl = document.getElementById('mobile-ul');
