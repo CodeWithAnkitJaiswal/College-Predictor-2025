@@ -364,12 +364,12 @@ counselling page
 /* Desktop layout */
 #why-choose-us {
   flex: 2;
-  min-width: 380px;
+  min-width: 320px;
 }
 
 #counselling-process {
   flex: 1;
-  min-width: 380px;
+  min-width: 320px;
 }
 
 /* Responsive layout for smaller screens */
@@ -420,14 +420,6 @@ counselling page
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
 
-@media screen and (max-width: 500px) {
-  .counselling-container{
-    padding: 1rem;
-  }
-  .counselling-container section {
-    padding: 2rem 1rem;
-  }
-}
 
 .counselling-process h2 {
   font-size: 2rem;
@@ -528,6 +520,31 @@ counselling page
   background-color: #f0f8ff;
 }
 
+.payment-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.card .pay{
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 30px;
+  background-color: transparent;
+  color: #27ae60;
+  font-size: 19px;
+  font-weight: 600;
+  border-radius: 26px;
+  text-decoration: none;
+  border: 2.5px solid #27ae60;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #27ae60;
+    color: white;
+  }
+}
+
 /* early bird */
 
 .early-bird-section {
@@ -595,4 +612,69 @@ counselling page
   margin-top: 1.5rem;
   font-size: 0.95rem;
   color: #e74c3c;
+}
+
+/* 
+
+faqs
+
+*/
+
+.faq-section {
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.faq-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: #34495e;
+  text-align: center;
+}
+
+.faq-section details {
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.8rem;
+  background-color: #f9f9f9;
+}
+
+.faq-section summary {
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+}
+
+.faq-section p, .faq-section ul {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .counselling-container{
+    padding: 1rem;
+  }
+  .counselling-container section {
+    padding: 2rem 1rem;
+  }
+  .header-content h1 {
+    font-size: 2.2rem;
+  }
+  .header-content p {
+      font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 405px) {
+  .counselling-container{
+    padding: 0.5rem;
+  }
+  .counselling-container section {
+    padding: 2rem 0.5rem;
+  }
 }
