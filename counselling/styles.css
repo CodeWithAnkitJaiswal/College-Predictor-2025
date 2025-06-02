@@ -1,5 +1,3 @@
-/* this file is for predictor pages */
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     margin: 0;
@@ -8,6 +6,11 @@
     list-style: none;
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
+    text-wrap: balance;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .downImg {
@@ -323,107 +326,273 @@ footer {
 }
 
 
+
 /* 
 
-page information and instructions
+counselling page
 
 */
 
-.page-info {
-    padding: 4rem 8vw;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.page-info .title {
-    font-size: 50px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--black);
+.header-content{
     text-align: center;
+    padding: 0 2rem;
+    margin: 3rem 0;
 }
 
-.instr {
-    margin-top: 5rem;
-    font-size: 18px;
+.header-content h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--heading);
+}
+
+.header-content p {
+    font-size: 1.2rem;
     color: var(--textSecondary);
-    width: 80%;
-    font-weight: 500;
-    border: 3px solid;
-    border-color: var(--mainColour);
-    border-radius: 10px 10px 6px 6px;
-    outline: none;
-    box-shadow: 0 0 6px 2px var(--textSecondary);
+    margin-bottom: 2rem;
 }
 
-.instr span {
+
+.counselling-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  align-items: flex-start; 
+}
+
+/* Desktop layout */
+#why-choose-us {
+  flex: 2;
+  min-width: 380px;
+}
+
+#counselling-process {
+  flex: 1;
+  min-width: 380px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 900px) {
+  .counselling-container {
+    flex-direction: column-reverse;
+  }
+
+  #why-choose-us,
+  #counselling-process {
+    flex: 1 1 100%;
     width: 100%;
-    display: block;
-    padding: 15px;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    color: var(--white);
-    background-color: var(--mainColour);
+  }
 }
 
-.instr .detailBox {
-    padding: 30px 40px;
+
+.counselling-container section {
+  padding: 2rem 1.5rem;
+  background-color: var(--bgForm);
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 1.5rem auto;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.info-detail {
-    margin-bottom: 12px;
-    list-style: disc;
+.why-choose-us h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--mainColour);
 }
 
-.read-more {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25px 0 0;
+.why-choose-us ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-.read-more a {
-    font-size: 20px;
-    letter-spacing: 1.2px;
-    color: var(--mainColour);
-    border: 2px solid;
-    border-color: var(--mainColour);
-    padding: 8px 25px;
-    font-weight: 500;
-    border-radius: 6px;
-    background-color: transparent;
-    transition: all 0.3s ease-in;
+.why-choose-us li {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--textPrimary);
+  background: var(--bgBody);
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 4px solid var(--mainColour);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
 
-.read-more a:hover {
-    background-color: var(--mainColour);
-    color: var(--white);
+@media screen and (max-width: 500px) {
+  .counselling-container{
+    padding: 1rem;
+  }
+  .counselling-container section {
+    padding: 2rem 1rem;
+  }
 }
 
-.info-detail:last-child {
-    margin-bottom: 0;
+.counselling-process h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--mainColour);
 }
 
-@media screen and (max-width: 780px) {
-    .instr {
-        width: 95%;
-    }
-    .mob-none {
-        display: none;
-    }
+.counselling-process ol strong {
+  font-size: 1.2rem;
+  color: var(--textPrimary);
+  /* display: block;
+  margin-bottom: -10px; */
 }
 
-@media screen and (max-width: 450px) {
-    .page-info .title {
-        font-size: 40px;
-    }
-    .instr {
-        width: 100%;
-    }
-    .instr .detailBox {
-        padding: 30px 15px;
-    }
+.counselling-process ol li {
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--textSecondary);
+  background: var(--bgBody);
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 4px solid var(--mainColour);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* pricing */
+
+.pricing-section {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.pricing-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.pricing-section p {
+  margin-bottom: 2rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+}
+
+.card .price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #27ae60;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card ul li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.card ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+}
+
+.card.highlight {
+  border: 2px solid #3498db;
+  background-color: #f0f8ff;
+}
+
+/* early bird */
+
+.early-bird-section {
+  padding: 2rem;
+  background-color: #fff0f0;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  border: 2px dashed #e74c3c;
+  margin-top: 2rem;
+}
+
+.early-bird-section h2 {
+  color: #c0392b;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.early-bird-section p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.early-bird-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.early-bird-cards .card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  border: 2px solid #e74c3c;
+}
+
+.early-bird-cards .early-price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.early-bird-cards .original-price {
+  text-decoration: line-through;
+  font-size: 1rem;
+  color: #888;
+  margin-left: 0.5rem;
+}
+
+.save {
+  color: #27ae60;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.early-bird-cards .highlight {
+  background-color: #fff7e6;
+  border: 2px solid #f39c12;
+}
+
+.note {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #e74c3c;
 }
