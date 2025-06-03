@@ -530,7 +530,7 @@ counselling page
 .card .pay{
   display: inline-block;
   margin-top: 1rem;
-  padding: 10px 30px;
+  padding: 8px 30px;
   background-color: transparent;
   color: #27ae60;
   font-size: 19px;
@@ -574,6 +574,7 @@ counselling page
   gap: 1.5rem;
   max-width: 1000px;
   margin: auto;
+  cursor: pointer;
 }
 
 .early-bird-cards .card {
