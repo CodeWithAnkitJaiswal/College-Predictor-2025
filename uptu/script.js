@@ -82,13 +82,15 @@
 
     function populateBranchCategories() {
         const categories = [
-            { label: "Computer Science Related", keyword: "Computer Science,Computing,Software,Informatics,computer" },
+            { label: "Computer Science Related", keyword: "Computer Science,Computing,Software,computer,CSE,Computational" },
             { label: "Artificial Intelligence Related", keyword: "Artificial Intelligence,AI" },
             { label: "Data Science Related", keyword: "Data Science,Analytics,data,ds,d.s." },
             { label: "Electronics Related", keyword: "Electronics,Communication,VLSI" },
             { label: "Mechanical Related", keyword: "Mechanical" },
             { label: "Civil Related", keyword: "Civil" },
             { label: "Chemical Related", keyword: "Chemical" },
+            { label: "Mathematics Related", keyword: "Mathematics,Statistics" },
+            { label: "Physics Related", keyword: "Physics" },
             { label: "Design and Architecture", keyword: "Architecture,Design,Planning" }
         ];
 
