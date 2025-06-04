@@ -90,8 +90,8 @@
         function populateBranchCategories() {
             const categories = [
                 { label: "4-Year B.Tech", keyword: "4 Years,Bachelor of Technology,btech" },
-                { label: "5-Year Dual Degree / M.Tech", keyword: "5 Years,m.tech" },
-                { label: "Computer Science Related", keyword: "Computer Science,Computing,Software,Informatics,computer" },
+                { label: "5-Year Dual Degree / M.Tech", keyword: "5 Years,m.tech,Dual Degree" },
+                { label: "Computer Science Related", keyword: "Computer Science,Computing,Software,computer,CSE,Computational" },
                 { label: "Artificial Intelligence Related", keyword: "Artificial Intelligence,AI" },
                 { label: "Data Science Related", keyword: "Data Science,Analytics,data,ds,d.s." },
                 { label: "Electronics Related", keyword: "Electronics,Communication,VLSI" },
