@@ -407,7 +407,7 @@ table
 
 .table-container {
     overflow-y: hidden;
-    overflow-x: hidden;
+    overflow-x: scroll;
     margin-top: 6rem;
     max-width: 92vw;
 }
