@@ -1,3 +1,7 @@
+// this script is of predictor that contains rounds in their data not in different table for rounds in different table use advanced prdictor script
+
+// this script is of predictor that contains rounds in their data not in different table for rounds in different table use advanced prdictor script
+
 (async() => {
     const SQL = await initSqlJs({ locateFile: file => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.6.2/${file}` });
     const response = await fetch('uptu.db');
@@ -138,7 +142,6 @@
             });
         });
 
-        // Sync category checkboxes on Select All / Deselect All
         const selectAllBtn = document.getElementById("select-all");
         const deselectAllBtn = document.getElementById("deselect-all");
         if (selectAllBtn && deselectAllBtn) {
@@ -161,7 +164,6 @@
             });
         }
 
-        // Also sync on initial load in case defaults are checked
         syncCategoryCheckboxes();
     }
 
@@ -172,13 +174,13 @@
         const state = document.getElementById('home-state').value;
         const round = document.getElementById('round').value;
         const genderEl = document.querySelector('input[name="gender"]:checked');
-        const gender = genderEl ? genderEl.value : null;
+        const genderInput = genderEl ? genderEl.value : null;
 
         if (!/^[0-9]+$/.test(rankInput)) {
             Swal.fire("Invalid Rank", "Please enter a valid numeric rank.", "warning");
             return;
         }
-        if (!gender) {
+        if (!genderInput) {
             Swal.fire("Select Gender", "Please select your gender.", "warning");
             return;
         }
@@ -190,14 +192,18 @@
             return;
         }
 
-
         const branchFilter = selectedBranches.join(', ');
+
+        let genderFilter = `AND Gender = '${genderInput}'`;
+        if (state !== 'Uttar Pradesh' && genderInput === 'Female') {
+            genderFilter = `AND Gender = 'Neutral'`;
+        }
 
         let query = `
       SELECT Institute, State, Branch, Quota, Seat, Gender, Open, Close FROM tb
       WHERE Seat = '${category}'
         AND Branch IN (${branchFilter})
-        AND Gender = '${gender}'
+        ${genderFilter}
         AND Rounds = '${round}'
         AND Close >= ${rank}`;
 
@@ -266,7 +272,6 @@
             const tr = document.createElement('tr');
             tr.innerHTML = `
         <td><a href="https://www.google.com/search?q=${encodeURIComponent(institute)}" target="_blank">${institute}</a></td>
-
         <td>${branch}</td>
         <td>${quota}</td>
         <td>${seat}</td>
