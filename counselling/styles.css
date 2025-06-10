@@ -515,6 +515,13 @@ counselling page
   color: #27ae60;
 }
 
+.card ul li.not::before{
+  content: "✘";
+  position: absolute;
+  left: 0;
+  color: #e74c3c;
+}
+
 .card.highlight {
   border: 2px solid #3498db;
   background-color: #f0f8ff;
@@ -544,6 +551,45 @@ counselling page
     color: white;
   }
 }
+
+
+.card.expired {
+    opacity: 0.6;
+    position: relative;
+    pointer-events: none;
+}
+
+.card.expired .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    padding: 4px 10px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-bottom-right-radius: 8px;
+}
+
+button.pay.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.countdown-timer {
+    color: #b30000;
+    background: #fff7f7;
+    padding: 6px 10px;
+    border-left: 4px solid #b30000;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+.pay.disabled {
+    background-color: #ccc !important;
+    cursor: not-allowed;
+}
+
+
 
 /* early bird */
 
