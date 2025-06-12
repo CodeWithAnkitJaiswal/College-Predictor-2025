@@ -207,45 +207,42 @@
 
         <!-- Preference List Offer Section -->
         <section id="preference-list-offer" class="pricing-section">
-            <h2>📋 JoSAA - Only Preference List – Just ₹99</h2>
+            <h2>📋 JoSAA - Only Preference List – <span style="text-decoration: line-through; color: gray;">₹99</span> <span style="color: #d32f2f;">(Offer Expired)</span></h2>
             <p>Get a well-curated JoSAA preference list delivered directly to your email—crafted by experts for better choice filling.</p>
-
-            <!-- COUNTDOWN TIMER -->
-            <div id="countdown-timer" style="font-size: 1.1rem; font-weight: bold; color: #d32f2f; margin-bottom: 15px;">
-                ⏳ Offer ends in: <span id="timer"></span>
-            </div>
-            
+        
+            <!-- COUNTDOWN TIMER (Expired Notice) -->
+<!--             <div id="countdown-timer" style="font-size: 1.1rem; font-weight: bold; color: #d32f2f; margin-bottom: 15px;">
+                ❌ Offer expired
+            </div> -->
+        
             <div class="pricing-cards">
-                <div class="card highlight">
+                <div class="card highlight" style="opacity: 0.6; pointer-events: none;">
                     <h3>🎯 Only Preference List</h3>
                     <p class="price">₹99</p>
-                    
                     <ul>
                         <li>Personalized Preference List (JoSAA only)</li>
                         <li>Chance-based: <strong>High</strong>, <strong>Medium</strong>, <strong>Low</strong> chances of getting</li>
                         <li>Delivered via Email (Within 24 hours)</li>
-                        <li>Based on Your Rank, Category & Goals</li>
+                        <li>Last minute personalized preference list of JoSAA For Hassel free Choice filling.</li>
                         <li>Only 1 list Given (No Update)</li>
                         <li class="not"> Personal Counselling</li>
                         <li class="not">Live Sessions</li>
                         <li class="not">CSAB or AKTU Support</li>
                     </ul>
-
+        
                     <div class="sample-link" style="margin-bottom: 10px;">
                         <a href="https://docs.google.com/spreadsheets/d/1u7v2HDcdYyCTSrbSmR8iya2zZNKWR0zYQ9J15B5oQeA/edit?usp=sharing" target="_blank" rel="noopener noreferrer">📄 View Sample Sheet</a>
                         <p style="font-size: 0.85rem; color: #666; margin-top: 5px;">
                             If the sheet doesn't open, please download Google Sheets app from Play Store.
                         </p>
                     </div>
-
+        
                     <div class="warning-note" style="margin-top: 15px; font-size: 0.9rem; color: #b30000; background: #fff5f5; padding: 10px; border-left: 4px solid #b30000; border-radius: 4px;">
-                        ⚠️ <strong>Important Note:</strong> Candidates with a very HIGH rank and <strong>near-zero chances</strong> of getting any seat in JoSAA are advised <strong>not to purchase</strong> this. <br>
-                        We do <strong>not offer refunds</strong> under any condition. The list is based strictly on your rank, category, and realistic chances—not on false hope.<br>
-                        If you do not receive any sheet, it means your chances are extremely low. We are not responsible in such cases.
+                        ⚠️ <strong>Important Note:</strong> This offer has ended. We are no longer accepting new orders for the ₹99 preference list. Please stay tuned for upcoming services.
                     </div>
-
+        
                     <div class="payment-button">
-                        <a href="https://rzp.io/rzp/JosaaPreferencebyCN" target="_blank" rel="noopener noreferrer" class="pay">Buy Now</a>
+                        <a class="pay disabled" style="pointer-events: none; background-color: gray; cursor: not-allowed;">Offer Closed</a>
                     </div>
                 </div>
             </div>
@@ -353,28 +350,5 @@
             }
         </script>
     <script src="../script-style.js"></script>
-    <!-- TIMER SCRIPT -->
-    <script>
-        // Set the deadline (change the date/time below to your desired offer end time)
-        const countdownDate = new Date("June 12, 2025 09:59:59").getTime();
-
-        const timerInterval = setInterval(function () {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
-
-            if (distance < 0) {
-                clearInterval(timerInterval);
-                document.getElementById("timer").innerHTML = "Offer Expired";
-                return;
-            }
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-        }, 1000);
-    </script>
 </body>
 </html>
