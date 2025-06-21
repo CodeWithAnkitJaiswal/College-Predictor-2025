@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +10,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 .downImg {
@@ -27,7 +27,7 @@ html {
     --lightBorder: #cfd8dc;
     --blackGlass: #b5b5b5f5;
     --whiteGlass: #fffffff7;
-    --primary: #1E88E5;
+    --primary: #1e88e5;
     --darkBorder: #373737;
     --heading: #000000;
     --black: #000000;
@@ -46,13 +46,11 @@ body {
     justify-content: space-between;
 }
 
-
 /* 
 
 navbar
 
 */
-
 
 /* === Base nav styling === */
 
@@ -86,7 +84,6 @@ nav .logo span:hover {
     transition: color 0.2s ease-out;
 }
 
-
 /* === Desktop menu === */
 
 .nav-menu .desktop-ul {
@@ -119,7 +116,6 @@ nav .logo span:hover {
 .nav-menu .desktop-ul li:last-child {
     margin-right: 0;
 }
-
 
 /* === Menu Icon === */
 
@@ -155,7 +151,6 @@ nav .menu-icon * {
 .active .bar-2 {
     transform: rotate(-45deg) translateY(-7px);
 }
-
 
 /* === Mobile Menu === */
 
@@ -198,7 +193,6 @@ nav .menu-icon * {
     pointer-events: auto;
 }
 
-
 /* === Responsive Queries === */
 
 @media screen and (max-width: 1000px) {
@@ -221,7 +215,7 @@ nav .menu-icon * {
         position: relative;
         z-index: 101;
     }
-    nav.active{
+    nav.active {
         position: fixed;
         top: 0;
         width: 100%;
@@ -236,7 +230,6 @@ nav .menu-icon * {
         padding: 0 1.2rem;
     }
 }
-
 
 /* 
 
@@ -325,15 +318,13 @@ footer {
     }
 }
 
-
-
 /* 
 
 counselling page
 
 */
 
-.header-content{
+.header-content {
     text-align: center;
     padding: 0 2rem;
     margin: 3rem 0;
@@ -352,206 +343,208 @@ counselling page
     margin-bottom: 2rem;
 }
 
-
 .counselling-container {
-  display: flex;
-  gap: 2rem;
-  padding: 2rem;
-  flex-wrap: wrap;
-  align-items: flex-start; 
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 /* Desktop layout */
 #why-choose-us {
-  flex: 2;
-  min-width: 320px;
+    flex: 2;
+    min-width: 320px;
 }
 
 #counselling-process {
-  flex: 1;
-  min-width: 320px;
+    flex: 1;
+    min-width: 320px;
 }
 
 /* Responsive layout for smaller screens */
 @media (max-width: 900px) {
-  .counselling-container {
-    flex-direction: column-reverse;
-  }
+    .counselling-container {
+        flex-direction: column-reverse;
+    }
 
-  #why-choose-us,
-  #counselling-process {
-    flex: 1 1 100%;
-    width: 100%;
-  }
+    #why-choose-us,
+    #counselling-process {
+        flex: 1 1 100%;
+        width: 100%;
+    }
 }
 
-
 .counselling-container section {
-  padding: 2rem 1.5rem;
-  background-color: var(--bgForm);
-  border-radius: 12px;
-  max-width: 900px;
-  margin: 1.5rem auto;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
-  font-family: 'Segoe UI', sans-serif;
+    padding: 2rem 1.5rem;
+    background-color: var(--bgForm);
+    border-radius: 12px;
+    max-width: 900px;
+    margin: 1.5rem auto;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+    font-family: "Segoe UI", sans-serif;
 }
 
 .why-choose-us h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  color: var(--mainColour);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--mainColour);
 }
 
 .why-choose-us ul {
-  list-style: none;
-  padding-left: 0;
+    list-style: none;
+    padding-left: 0;
 }
 
 .why-choose-us li {
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--textPrimary);
-  background: var(--bgBody);
-  padding: 1rem;
-  border-radius: 10px;
-  border-left: 4px solid var(--mainColour);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--textPrimary);
+    background: var(--bgBody);
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--mainColour);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
 
-
 .counselling-process h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  color: var(--mainColour);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--mainColour);
 }
 
 .counselling-process ol strong {
-  font-size: 1.2rem;
-  color: var(--textPrimary);
-  /* display: block;
+    font-size: 1.2rem;
+    color: var(--textPrimary);
+    /* display: block;
   margin-bottom: -10px; */
 }
 
 .counselling-process ol li {
-  margin-bottom: 1.2rem;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--textSecondary);
-  background: var(--bgBody);
-  padding: 1rem;
-  border-radius: 10px;
-  border-left: 4px solid var(--mainColour);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--textSecondary);
+    background: var(--bgBody);
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--mainColour);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
 
 /* pricing */
 
 .pricing-section {
-  padding: 2rem;
-  background-color: #f9f9f9;
-  text-align: center;
-  font-family: 'Segoe UI', sans-serif;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+    font-family: "Segoe UI", sans-serif;
 }
 
 .pricing-section h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
 }
 
 .pricing-section p {
-  margin-bottom: 2rem;
-  color: #555;
-  font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #555;
+    font-size: 1rem;
 }
 
 .pricing-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  max-width: 1100px;
-  margin: auto;
+    display: flex;
+    /* grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); */
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: auto;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card {
-  background: white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
-  text-align: left;
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+    text-align: left;
+    width: 30%;
+    min-width: 360px;
 }
 
 .card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-  color: #34495e;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #34495e;
 }
 
 .card .price {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #27ae60;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #27ae60;
 }
 
 .card ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .card ul li {
-  margin-bottom: 0.5rem;
-  padding-left: 1.2rem;
-  position: relative;
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
 }
 
 .card ul li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #27ae60;
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #27ae60;
 }
 
-.card ul li.not::before{
-  content: "✘";
-  position: absolute;
-  left: 0;
-  color: #e74c3c;
+.card ul li.not::before {
+    content: "✘";
+    position: absolute;
+    left: 0;
+    color: #e74c3c;
 }
 
 .card.highlight {
-  border: 2px solid #3498db;
-  background-color: #f0f8ff;
+    border: 2px solid #3498db;
+    background-color: #f0f8ff;
 }
 
 .payment-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
 }
 
-.card .pay{
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 8px 30px;
-  background-color: transparent;
-  color: #27ae60;
-  font-size: 19px;
-  font-weight: 600;
-  border-radius: 26px;
-  text-decoration: none;
-  border: 2.5px solid #27ae60;
-  transition: background-color 0.3s ease;
-  &:hover {
-    background-color: #27ae60;
-    color: white;
-  }
+.card .pay {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 8px 30px;
+    background-color: transparent;
+    color: #27ae60;
+    font-size: 19px;
+    font-weight: 600;
+    border-radius: 26px;
+    text-decoration: none;
+    border: 2.5px solid #27ae60;
+    transition: background-color 0.3s ease;
+    &:hover {
+        background-color: #27ae60;
+        color: white;
+    }
 }
-
 
 .card.expired {
     opacity: 0.6;
@@ -589,76 +582,74 @@ button.pay.disabled {
     cursor: not-allowed;
 }
 
-
-
 /* early bird */
 
 .early-bird-section {
-  padding: 2rem;
-  background-color: #fff0f0;
-  text-align: center;
-  font-family: 'Segoe UI', sans-serif;
-  border: 2px dashed #e74c3c;
-  margin-top: 2rem;
+    padding: 2rem;
+    background-color: #fff0f0;
+    text-align: center;
+    font-family: "Segoe UI", sans-serif;
+    border: 2px dashed #e74c3c;
+    margin-top: 2rem;
 }
 
 .early-bird-section h2 {
-  color: #c0392b;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+    color: #c0392b;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .early-bird-section p {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-  color: #444;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #444;
 }
 
 .early-bird-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  max-width: 1000px;
-  margin: auto;
-  cursor: pointer;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: auto;
+    cursor: pointer;
 }
 
 .early-bird-cards .card {
-  background: #ffffff;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  border: 2px solid #e74c3c;
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border: 2px solid #e74c3c;
 }
 
 .early-bird-cards .early-price {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #e74c3c;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #e74c3c;
 }
 
 .early-bird-cards .original-price {
-  text-decoration: line-through;
-  font-size: 1rem;
-  color: #888;
-  margin-left: 0.5rem;
+    text-decoration: line-through;
+    font-size: 1rem;
+    color: #888;
+    margin-left: 0.5rem;
 }
 
 .save {
-  color: #27ae60;
-  font-weight: bold;
-  margin-top: 0.5rem;
+    color: #27ae60;
+    font-weight: bold;
+    margin-top: 0.5rem;
 }
 
 .early-bird-cards .highlight {
-  background-color: #fff7e6;
-  border: 2px solid #f39c12;
+    background-color: #fff7e6;
+    border: 2px solid #f39c12;
 }
 
 .note {
-  margin-top: 1.5rem;
-  font-size: 0.95rem;
-  color: #e74c3c;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    color: #e74c3c;
 }
 
 /* 
@@ -668,60 +659,59 @@ faqs
 */
 
 .faq-section {
-  max-width: 800px;
-  margin: auto;
-  padding: 1rem;
-  margin-top: 2rem;
+    max-width: 800px;
+    margin: auto;
+    padding: 1rem;
+    margin-top: 2rem;
 }
 
 .faq-section h2 {
-  font-size: 2rem;
-  margin-bottom: 2.5rem;
-  color: #34495e;
-  text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: #34495e;
+    text-align: center;
 }
 
 .faq-section details {
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 0.8rem;
-  background-color: #f9f9f9;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 0.8rem;
+    background-color: #f9f9f9;
 }
 
 .faq-section summary {
-  font-weight: 600;
-  cursor: pointer;
-  outline: none;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
 }
 
-.faq-section p, .faq-section ul {
-  margin-top: 0.5rem;
-  margin-left: 1rem;
+.faq-section p,
+.faq-section ul {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
 }
-
-
 
 @media screen and (max-width: 500px) {
-  .counselling-container{
-    padding: 1rem;
-  }
-  .counselling-container section {
-    padding: 2rem 1rem;
-  }
-  .header-content h1 {
-    font-size: 2.2rem;
-  }
-  .header-content p {
-      font-size: 1rem;
-  }
+    .counselling-container {
+        padding: 1rem;
+    }
+    .counselling-container section {
+        padding: 2rem 1rem;
+    }
+    .header-content h1 {
+        font-size: 2.2rem;
+    }
+    .header-content p {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width: 405px) {
-  .counselling-container{
-    padding: 0.5rem;
-  }
-  .counselling-container section {
-    padding: 2rem 0.5rem;
-  }
+    .counselling-container {
+        padding: 0.5rem;
+    }
+    .counselling-container section {
+        padding: 2rem 0.5rem;
+    }
 }
