@@ -445,61 +445,77 @@ counselling page
 }
 
 .pricing-section h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+    margin-bottom: 0.75rem;
     color: #2c3e50;
 }
 
 .pricing-section p {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     color: #555;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .pricing-cards {
-    display: flex;
-    /* grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     max-width: 1100px;
     margin: auto;
-    align-items: flex-start;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    align-items: stretch;
+}
+
+@media (max-width: 768px) {
+    .pricing-cards {
+        grid-template-columns: 1fr;
+    }
 }
 
 .card {
     background: white;
     border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+    padding: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     text-align: left;
-    width: 30%;
-    min-width: 360px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+
 .card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
     color: #34495e;
 }
 
 .card .price {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
     color: #27ae60;
 }
 
 .card ul {
     list-style: none;
     padding: 0;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
 }
 
 .card ul li {
-    margin-bottom: 0.5rem;
-    padding-left: 1.2rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
     position: relative;
+    font-size: 1rem;
 }
 
 .card ul li::before {
@@ -519,6 +535,7 @@ counselling page
 .card.highlight {
     border: 2px solid #3498db;
     background-color: #f0f8ff;
+    transform: scale(1.02);
 }
 
 .payment-button {
@@ -531,10 +548,10 @@ counselling page
 .card .pay {
     display: inline-block;
     margin-top: 1rem;
-    padding: 8px 30px;
+    padding: 10px 35px;
     background-color: transparent;
     color: #27ae60;
-    font-size: 19px;
+    font-size: 1rem;
     font-weight: 600;
     border-radius: 26px;
     text-decoration: none;
@@ -547,21 +564,31 @@ counselling page
 }
 
 .card.expired {
-    opacity: 0.6;
     position: relative;
     pointer-events: none;
+    background-color: #f9f9f9;
+}
+.card.expired > *:not(.overlay){
+    opacity: 0.5;
 }
 
 .card.expired .overlay {
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(255, 0, 0, 0.8);
+    background: #e74c3c;
     color: white;
     padding: 4px 10px;
     font-weight: bold;
     font-size: 0.9rem;
     border-bottom-right-radius: 8px;
+}
+
+.stacked-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
 }
 
 button.pay.disabled {
@@ -581,6 +608,40 @@ button.pay.disabled {
     background-color: #ccc !important;
     cursor: not-allowed;
 }
+
+/* New classes for inline styles from HTML */
+.card.disabled-offer {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.note-box {
+    background: #fff8dc;
+    border: 1px solid #f0c36d;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.warning-note {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #b30000;
+    background: #fff5f5;
+    padding: 10px;
+    border-left: 4px solid #b30000;
+    border-radius: 4px;
+}
+
+.disabled-payment-link {
+    pointer-events: none;
+    background-color: gray !important;
+    cursor: not-allowed;
+    border-color: gray !important;
+    color: white !important;
+}
+
 
 /* early bird */
 
@@ -660,13 +721,12 @@ faqs
 
 .faq-section {
     max-width: 800px;
-    margin: auto;
-    padding: 1rem;
-    margin-top: 2rem;
+    margin: 4rem auto;
+    padding: 2rem 1rem;
 }
 
 .faq-section h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 2.5rem;
     color: #34495e;
     text-align: center;
@@ -674,22 +734,73 @@ faqs
 
 .faq-section details {
     margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 0.8rem;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 0;
+    padding: 1.5rem 0.5rem;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.faq-section details[open] {
     background-color: #f9f9f9;
+    border-radius: 8px;
+    border-bottom: 1px solid transparent;
+    padding: 1.5rem;
 }
 
 .faq-section summary {
     font-weight: 600;
     cursor: pointer;
     outline: none;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.faq-section summary::after {
+    content: '+';
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--mainColour);
+    transition: transform 0.3s ease;
+}
+
+.faq-section details[open] summary::after {
+    transform: rotate(45deg);
+}
+
 
 .faq-section p,
 .faq-section ul {
     margin-top: 0.5rem;
     margin-left: 1rem;
+    line-height: 1.7;
+    color: var(--textSecondary);
+}
+
+.faq-section ul {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+.csab-offer-card {
+    position: relative;
+    padding-top: 3rem !important;
+}
+
+.csab-offer-card .price {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2.2rem !important;
+    font-weight: bold;
+    color: #fff !important;
+    background-color: #27ae60;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin: 0 !important;
 }
 
 @media screen and (max-width: 500px) {
