@@ -70,17 +70,20 @@ College-Predictor-2025/
 ### 1. User Inputs  
 - Rank  
 - Category (GEN/OBC/SC/ST/EWS)  
-- Branch Preference  
-- Exam Type  
+- Branch Preference
+- Home State
+- Gender
 
 ### 2. Algorithm Filters the Dataset  
 Filtering steps:
 
 1. Load dataset  
-2. Match category  
-3. Match branch  
-4. Check rank <= closing rank  
-5. Sort results by:
+2. Match category
+3. Match gender
+4. Check Home State Quota
+5. Match branch  
+6. Check rank <= closing rank  
+7. Sort results by:
    - cutoff difficulty  
    - distance  
    - placement tier (optional)
@@ -89,9 +92,32 @@ Filtering steps:
 Predicted colleges with:
 - Institute name  
 - Branch name  
-- Closing rank  
-- Year of cutoff  
-- Probability (High / Medium / Low)
+- Closing rank
+- Quota (home state)
+- category
+- Gender
+
+---
+
+## 🖨️ Print Your Choice Order
+
+The predictor includes a built-in **Print button** that allows students to export their final college choice list in a clean and formatted layout.
+
+### What the Print Feature Does
+- Prints the **entire prediction table** with all filtered colleges  
+- Auto-formats the table for A4 size  
+- Removes unnecessary UI elements during printing  
+- Generates a **clean, official-looking list** students can save as:
+  - PDF  
+  - Physical printout  
+
+### How to Use It
+1. Enter your rank, category, branch, and exam type  
+2. View the predicted college list  
+3. Click the **“Print”** button at the top  
+4. Choose **Save as PDF** or **Print** directly  
+
+This helps students keep their counselling preference order handy during form filling.
 
 ---
 
@@ -130,8 +156,9 @@ Your hosted URL will be generated instantly.
 ## 📊 Dataset Source
 
 This project uses **public cutoff datasets** from:  
-- UPTAC official cutoff PDFs  
-- JEE Main JoSAA mock data  
+- UPTAC official cutoff 
+- JOSAA official cutoff
+- CSAB official cutoff
 - Community-compiled datasets  
 
 *(Replace these with actual sources if needed)*
