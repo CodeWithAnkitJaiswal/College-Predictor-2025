@@ -139,20 +139,6 @@ No build tools required.
 
 ---
 
-## 🌐 Deployment (Netlify Recommended)
-
-1. Visit https://netlify.com  
-2. Click **New Site from Git**  
-3. Select your GitHub repo  
-4. Configure:
-   - **Build command:** none  
-   - **Publish directory:** `/`  
-5. Deploy
-
-Your hosted URL will be generated instantly.
-
----
-
 ## 📊 Dataset Source
 
 This project uses **public cutoff datasets** from:  
