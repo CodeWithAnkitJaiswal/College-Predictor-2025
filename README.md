@@ -26,15 +26,41 @@ This project helps students estimate which colleges they can get based on their 
 ## 📁 Project Structure
 
 ```
-/root
-│── index.html
-│── style.css
-│── script.js
-│── /data
-│     └── cutoff.json or cutoff.csv
-│── /utils
-│     └── parser.js
-│── README.md
+College-Predictor-2025/
+│
+├── index.html
+├── styles.css
+├── script-style.js
+├── common.css
+├── features.js
+├── landing.css
+├── landing.js
+├── robots.txt
+├── sitemap.xml
+│
+├── counselling/
+│   ├── index.html
+│   └── styles.css
+│
+├── csab/
+│   ├── index.html
+│   ├── csab.db
+│   └── styles.css
+│
+├── josaa/
+│   ├── index.html
+│   ├── josaa.db
+│   ├── josaa5.db
+│   └── script.js
+│
+├── uptu/
+│   ├── index.html
+│   ├── styles.css
+│   ├── counsellingAd.js
+│   └── (other related JS/CSS files)
+│
+└── img/
+    └── (images and assets)
 ```
 
 ---
