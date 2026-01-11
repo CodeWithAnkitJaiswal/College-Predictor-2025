@@ -182,5 +182,6 @@ MIT License – free to use and modify.
 ## 🙋 Contact
 
 **Ankit Jaiswal**  
+
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/cwankitjaiswal7)
 
