@@ -173,12 +173,6 @@ You can:
 
 ---
 
-## 📄 License
-
-MIT License – free to use and modify.
-
----
-
 ## 🙋 Contact
 
 **Ankit Jaiswal**  
