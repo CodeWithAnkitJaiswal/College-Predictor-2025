@@ -10,20 +10,15 @@ This project helps students estimate which colleges they can get based on their 
 - 🔍 Predict colleges based on rank, category, quota, and branch  
 - 📊 Uses real historical cutoff data (UPTAC / JEE-based datasets)  
 - ⚡ Fast search with optimized filtering  
-- 📱 Mobile-friendly UI  
-- 🧩 Modular architecture for adding:
-  - new exams  
-  - new years  
-  - new datasets  
-- 🧪 Easy to deploy on Netlify / Vercel / GitHub Pages
+- 📱 Mobile-friendly UI
 
 ---
 
 ## 🏗️ Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript  
-- **Backend:** (Optional) Node.js for data preprocessing  
-- **Data:** CSV/JSON cutoff files  
+- **Backend:** JavaScript
+- **Data:** sqlite cutoff files  
 - **Deployment:** Netlify (recommended)
 
 ---
